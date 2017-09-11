@@ -1,7 +1,7 @@
 /*
 	Theme Name: Intensive Course 
 	Theme URI:
-	Description: Based of the Outreach Pro Child Theme from StudioPress
+	Description: Based of the intensivecourses Pro Child Theme from StudioPress
 	Author: StudioPress / CojCruz
 	Author URI: http://cojcruz.com
 	Version: 1.0.0
@@ -65,10 +65,10 @@
 	- Footer Widgets
 	- Site Footer
 	- Theme Colors
-		- Outreach Pro Blue
-		- Outreach Pro Orange
-		- Outreach Pro Purple
-		- Outreach Pro Red
+		- intensivecourses Pro Blue
+		- intensivecourses Pro Orange
+		- intensivecourses Pro Purple
+		- intensivecourses Pro Red
 	- Media Queries
 	- Retina Display
 		- Retina
@@ -167,8 +167,8 @@ html {
 
 body {
 	background-color: #222;
-	color: #333;
-	font-family: 'Lato', sans-serif;
+	color: #333;	
+	font-family: Roboto, Helvetica, Arial, Verdana, sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: 400;
@@ -201,12 +201,26 @@ textarea:focus,
 }
 
 a {
-	color: #6ab446;
-	text-decoration: none;
+	color: #4d71da;
+	text-decoration: underline;
 }
 
 a:hover {
-	color: #589b37;
+	text-decoration: none;
+}
+
+a.button-link {
+	color: #333;
+	text-decoration: none;
+}
+
+a.button-link:hover {
+	text-decoration: underline;
+}
+
+a.button-link .fa {
+	margin-right: 0;
+	margin-left: 8px;	
 }
 
 p {
@@ -439,7 +453,7 @@ Structure and Layout
 
 .wrap {
 	margin: 0 auto;
-	max-width: 1140px;
+	max-width: 1280px;
 }
 
 .site-inner {
@@ -451,12 +465,16 @@ Structure and Layout
 	padding-top: 3rem;
 }
 
-.outreach-pro-home .site-inner {
-	padding: 4px 0;
-	padding: 0.4rem 0;
+.home .site-inner {
+	margin: 0;
+	padding: 0;	
 }
 
-.outreach-pro-landing .wrap {
+.home .site-inner .wrap {
+	max-width: none;
+}
+
+.intensivecourses-pro-landing .wrap {
 	max-width: 900px;
 }
 
@@ -493,7 +511,7 @@ Structure and Layout
 	width: 760px;
 }
 
-.outreach-pro-home .content {
+.intensivecourses-pro-home .content {
 	margin: 0;
 }
 
@@ -725,6 +743,168 @@ Common Classes
 .footer-widgets .widget-title,
 .site-header .widget-title {
 	color: #fff;
+}
+
+/* Top Bar
+--------------------------------------------- */
+
+#topbar {
+	background: rgba(91,91,91,0.32) none repeat center center;
+	color: #fff;	
+	font-size: 13px;
+}
+
+#topbar:after {
+	content: '';
+	display: block;
+	clear: both;	
+}
+
+#topbar .wrap {
+	max-width: none;
+	padding: 10px 44px;
+	width: 100%;
+}
+
+#topbar .wrap .one-half.last {
+	text-align: right;
+}
+
+#topbar .wrap .one-half > div {
+	display: inline-block;
+}
+
+#topbar a {
+	color: #fff;	
+}
+
+#topbar .material-icons {
+	font-size: 18px;
+	vertical-align: bottom;
+	line-height: 20px;
+}
+
+#topbar .shopping-cart {
+	position: relative;
+}
+
+#topbar .shopping-cart .shopping-cart-wrap {
+	position: absolute;
+	z-index: 200;
+	padding-top: 8px;
+	top: 23px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 300ms ease-in-out;
+}
+
+#topbar .shopping-cart:hover .shopping-cart-wrap {
+	opacity: 1;
+	visibility: visible;
+}
+
+#topbar .shopping-cart .shopping-cart-inner {
+	width: 250px;
+	color: #3a3a3a;
+	font-size: 14px;
+	background: rgba(255,255,255,.97);
+	text-align: left;
+	padding: 15px 20px 10px;
+	overflow: hidden;
+}
+
+#topbar .shopping-cart .wc-ico-cart span.counter {
+	background: linear-gradient(to right,#4d71da 0%,#35c4f4 100%);
+	margin-left: 7px;
+	width: 14px;
+	height: 14px;
+	display: inline-block;
+	font-size: 8px;
+	text-align: center;
+	position: relative;
+	top: -2px;
+	border-radius: 50%;
+	line-height: 14px;
+}
+
+#topbar .shopping-cart .cart_list {
+	margin-bottom: 15px;
+}
+
+#topbar .shopping-cart .product_list_widget li a {
+	color: #3a3a3a;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 25px;
+}
+
+#topbar .shopping-cart .product_list_widget li:after {
+	content: '';
+	display: block;
+	clear: both;	
+}
+
+#topbar .shopping-cart .product_list_widget li a:hover {
+	color: #4d71da;	
+}
+
+#topbar .shopping-cart-inner a.remove {
+	display: block;
+	font-size: 1.5em !important;
+	height: 1em !important;
+	width: 1em;
+	text-align: center;
+	line-height: 1;
+	border-radius: 100%;
+	color: #3a3a3a;
+	text-decoration: none;
+	font-weight: 700;
+	border: 0;
+	position: absolute;
+}
+
+#topbar  .shopping-cart-inner .cart_list a.remove:hover {
+	color: #fff !important;
+	background: #4d71da;
+	-webkit-text-fill-color: #fff !important;
+}
+
+#topbar .shopping-cart .product_list_widget li img {
+	width: 50px;
+	float: left;
+	margin: 5px 20px 5px 0;
+}
+
+#topbar .shopping-cart .quantity {
+	-webkit-text-fill-color: rgba(58,58,58,0.5);
+}
+
+#topbar .shopping-cart .total strong {
+	-webkit-text-fill-color: rgba(58,58,58,0.5);
+	font-weight: 400;
+}
+
+#topbar .shopping-cart .buttons {
+	margin: 0;	
+}
+
+#topbar .shopping-cart .buttons .button {
+	border-radius: 4px;
+	background-color: #4d71da;
+	color: #fff;
+	background: linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	padding: 0 14.33px;
+	transition: box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+	display: inline-block;
+	text-transform: none;
+	font-size: 14px;
+	margin: 0 10px 15px 0;
+	line-height: 31px;
+}
+
+#topbar .shopping-cart .buttons .button:hover {
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 }
 
 /* WordPress
@@ -1029,7 +1209,7 @@ Site Header
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #589b37;
+	background-image: none, linear-gradient(to top,rgba(34,34,34,0.75) 0px,rgba(34,34,34,0.8) 10px,rgba(34,34,34,0.86) 20px,rgba(34,34,34,0.9) 30px,rgba(34,34,34,0.94) 40px,rgba(34,34,34,0.98) 50px,rgba(34,34,34,0.99) 60px,#222222 70px);
 	color: #fff;
 	min-height: 110px;
 }
@@ -1039,18 +1219,20 @@ Site Header
 }
 
 .site-header .wrap {
-	padding: 20px 0;
-	padding: 2rem 0;
+	padding: 0 44px;
+	padding: 0 4.4rem;
+	max-width: none;
 }
 
 /* Title Area
 --------------------------------------------- */
 
 .title-area {
-	float: left;
 	padding: 14px 0;
 	padding: 1.4rem 0;
 	width: 340px;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .header-full-width .title-area {
@@ -1068,6 +1250,11 @@ Site Header
 .site-title a,
 .site-title a:hover {
 	color: #fff;
+	display: block;
+	text-indent: -9999px;
+	width: 200px;
+	height: 106px;
+	background: url(images/logo.png) no-repeat center center;
 }
 
 .header-image .title-area {
@@ -1105,11 +1292,11 @@ Site Header
 --------------------------------------------- */
 
 .site-header .widget-area {
-	float: right;
 	padding-top: 14px;
 	padding-top: 1.4rem;
 	text-align: right;
-	width: 740px;
+	display: inline-block;
+	width: calc(100% - 340px);
 }
 
 .site-header .widget-area a {
@@ -1161,16 +1348,30 @@ Site Navigation
 
 .genesis-nav-menu a {
 	display: block;
-	padding: 18px 20px;
-	padding: 1.8rem 2rem;
+	padding: 8px 12px 9px;
+	border: 1px solid transparent;
+	transition: all 300ms ease-in-out;
+	border-radius: 4px;
+	font-size: 17px;
 }
 
-.genesis-nav-menu .current-menu-item > a,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover,
-.genesis-nav-menu a:hover,
-.genesis-nav-menu li:hover > a {
+.genesis-nav-menu .current-menu-item > a {
 	background-color: #fff;
 	color: #000;
+}
+
+.genesis-nav-menu > .menu-item:hover > a {
+	background-color: transparent;	
+	border-color: #fff;
+	color: #fff;
+}
+
+.genesis-nav-menu > .menu-item:last-child a {
+	background: none !important;
+	border: none !important;
+	display: inline-block;
+	padding: 12px 0px;
+	line-height: 8px;
 }
 
 .genesis-nav-menu > .menu-item > a {
@@ -1178,7 +1379,6 @@ Site Navigation
 }
 
 .genesis-nav-menu .sub-menu {
-	border-top: 1px solid #fff;
 	left: -9999px;
 	opacity: 0;
 	position: absolute;
@@ -1187,21 +1387,24 @@ Site Navigation
 	-ms-transition:     opacity .4s ease-in-out;
 	-o-transition:      opacity .4s ease-in-out;
 	transition:         opacity .4s ease-in-out;
-	width: 200px;
+	width: 20%;
+	min-width: 240px;
+	max-width: 100%;
 	z-index: 999;
 }
 
 .genesis-nav-menu .sub-menu a {
-	background-color: #eee;
-	border: 1px solid #fff;
-	border-top: none;
-	color: #333;
-	font-size: 12px;
-	font-size: 1.2rem;
-	padding: 14px 20px;
-	padding: 1.4rem 2rem;
+	color: #3a3a3a;
+	font-size: 17px;
+	font-size: 1.7rem;
+	padding: 8px 10px;
 	position: relative;
-	width: 200px;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+.genesis-nav-menu .sub-menu a:hover {
+	color: #4d71da;	
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
@@ -1209,12 +1412,13 @@ Site Navigation
 }
 
 .genesis-nav-menu .menu-item:hover {
-	position: static;
+	position: relative;
 }
 
 .genesis-nav-menu .menu-item:hover > .sub-menu {
-	left: auto;
+	left: -50%;
 	opacity: 1;
+	background: #fff;
 }
 
 .genesis-nav-menu > .first > a {
@@ -1262,13 +1466,120 @@ Site Navigation
 	padding: 1rem 1.6rem;
 }
 
+#mega-menu-max_mega_menu_1 .mini-search {
+	transition: all 300ms ease-in-out;	
+	outline: none;
+	position: relative !important;
+	height: 60px;
+	line-height: 60px;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search #trigger-overlay {
+	display: inline-block;
+	width: 24px;
+	height: 24px;	
+	outline: none;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search #trigger-overlay:hover {
+	color: #fff;	
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .search, 
+#mega-menu-max_mega_menu_1 .mini-search .close {
+	position: absolute;
+	top: 2px;	
+	right: 0;
+	outline: none;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .search{
+	visibility: visible;
+	opacity: 1;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search.active .search {
+	visibility: hidden;
+	opacity: 0;
+	max-width: none !important;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .close {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search.active .close {
+	visibility: visible;
+	opacity: 1;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .searchform {
+	position: relative;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 300ms ease-in-out;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search.active .searchform {
+	visibility: visible;
+	opacity: 1;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .field {
+	position: absolute;
+	top: 35px;
+	right: 6px;
+	width: 250px;
+	color: #3a3a3a;
+	-webkit-text-fill-color: #3a3a3a !important;
+	font: normal 500 12px / 16px "Roboto", Helvetica, Arial, Verdana, sans-serif;
+	text-transform: uppercase;
+	line-height: 24px;
+	padding: 7px 15px;
+	max-width: none !important;
+}
+
+#mega-menu-max_mega_menu_1 .mini-search .searchsubmit {
+	display: none;
+}
+
+#mega-menu-wrap-max_mega_menu_1 {
+	clear: both !important;
+	text-align: right !important;
+}
+
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 {
+	width: auto !important;
+	display: inline-block !important;
+}
+
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 .mega-menu-link:after {
+	display: none !important;	
+}
+
+#mega-menu-wrap-max_mega_menu_1 #mega-menu-max_mega_menu_1 > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link {
+	background: #fff !important;
+	color: #3a3a3a !important;
+}
+
+.home .caption {
+	font-size: 33px;
+	letter-spacing: 0;
+	line-height: 45px;
+	margin: 0;
+	bottom: none !important;
+	padding: 200px !important;
+	background-color: transparent;
+}
+
 /* Site Header Navigation
 --------------------------------------------- */
 
 .site-header .genesis-nav-menu li,
 .site-header .genesis-nav-menu li ul {
 	border-bottom: none;
-	margin: 0;
+	margin: 0 13px;
 	padding: 0;
 }
 
@@ -1346,49 +1657,118 @@ Content Area
 
 .home-top .widget {
 	margin: 0;
-	padding: 0 40px 40px;
-	padding: 0 4rem 4rem;
+	padding: 0;
 }
 
-.home-top .widget:first-child {
-	padding-top: 40px;
-	padding-top: 4rem;
+.home-top .widget .rslides > li {
+	margin: 0 !important;
+	padding: 0 !important;
+	outline: none !important;
+	border: none !important;
 }
 
 .home-top .widget.genesis_responsive_slider {
 	padding: 0;
 }
 
-.outreach-pro-home .content {
+.intensivecourses-pro-home .content {
 	padding: 0;
 }
 
 .home-bottom {
 	background-color: #fff;
-	padding-top: 60px;
-	padding-top: 6rem;
+}
+
+.home-bottom .wrap {
+	max-width: none;
 }
 
 .home-bottom .widget {
-	float: left;
-	margin-left: 2.564102564102564%;
-	width: 23.076923076923077%;
+	width: 100%;
+	margin: auto;
 }
 
-.home-bottom .widget:nth-child(4n+1) {
-	clear: both;
-	margin-left: 0;
+.home-bottom .widget .entry-content > .vc_row {
+	margin-left: auto !important;
+	margin-right: auto !important;	
 }
 
-.home-bottom .featured-content img {
-	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-	-moz-box-shadow:    1px 1px 4px rgba(0, 0, 0, 0.4);
-	box-shadow:         1px 1px 4px rgba(0, 0, 0, 0.4);
+.home-bottom .widget .entry-content > .vc_row:nth-child(odd) {
+	background: #222;
+	color: #fff;
+	padding: 40px 0;
+	padding: 4rem 0;
 }
 
-.home-bottom .widget-title {
+.home-bottom .widget .entry-content > .vc_row:nth-child(odd) h1,
+.home-bottom .widget .entry-content > .vc_row:nth-child(16) h1 {
+	font-size: 46px;
+	font-weight: normal;	
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(even) {
+	max-width: 1280px;
+	margin: 75px auto 80px;		
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(2) .wpb_wrapper img {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(12) {
+	margin-bottom: 0;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(13) {
+	margin-top: 0;
+	max-width: 1280px;
 	color: #333;
-	font-weight: 700;
+	background: none;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(14) {
+	margin-bottom: 0;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(14) > .wpb_column:last-child {
+	display: none;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(15) {
+	background: none;
+	color: #777;
+	padding: 0 200px 40px;
+	max-width: 1280px;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(16) {
+	background: #222;
+	max-width: none;
+	color: #fff;
+	padding: 40px;
+	margin-bottom: 0;
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(17) {
+	background: none;
+	max-width: 1280px;
+	color: #777;	
+}
+
+.home-bottom .widget .entry-content > .vc_row:nth-child(17) h3 {
+	font: normal normal normal 26px / 34px "Roboto", Helvetica, Arial, Verdana, sans-serif;
+	color: #333;	
+}
+
+.hr-thin, .list-divider li {
+	border-style: solid;
+	border-width: 1px;
+	border-color: rgba(119,119,119,0.15);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 }
 
 /* Entries
@@ -1657,6 +2037,31 @@ Footer Widgets
 	padding: 6rem 0 3rem;
 }
 
+.footer-widgets .widget {
+	min-height: 200px;	
+}
+
+.footer-widgets .footer-widgets-1 .widget:last-child {
+	min-height: 0;	
+}
+
+.footer-widgets .widget li {
+	color: #777;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-widgets .widget a {
+	color: #888;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+.footer-widgets .widget a:hover {
+	color: #fff;	
+}
+
 .footer-widgets input {
 	border: 1px solid #333;
 }
@@ -1695,19 +2100,22 @@ Site Footer
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-	background-color: #222;
-	border-top: 1px solid rgba(0, 0, 0, 0.2);
-	box-shadow: inset 0 1px rgba(255, 255, 255, 0.07);
-	color: #666;
-	font-size: 14px;
-	font-size: 1.4rem;
-	padding: 40px 0;
-	padding: 4rem 0;
-	text-align: center;
+	background: url(images/skin17r.general-boxed-bg-image.jpg) no-repeat center center fixed;
+	background-size: cover;
+	border-top: 1px solid1px solid rgba(119,119,119,0.15);
+	color: #777;
+}
+
+.site-footer .wrap > div {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 10px;
+	padding: 1rem;
 }
 
 .site-footer a {
-	color: #666;
+	color: #777;
+	text-decoration: none;
 }
 
 .site-footer a:hover {
@@ -1722,373 +2130,495 @@ Site Footer
 Theme Colors
 ---------------------------------------------------------------------------------------------------- */
 
-/* Outreach Pro Blue
+/* intensivecourses Pro Blue
 --------------------------------------------- */
 
-.outreach-pro-blue .content .entry-title a:hover,
-.outreach-pro-blue .content #genesis-responsive-slider a,
-.outreach-pro-blue .content #genesis-responsive-slider h2 a:hover,
-.outreach-pro-blue .nav-secondary .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-blue .nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.outreach-pro-blue .nav-secondary .genesis-nav-menu a:hover,
-.outreach-pro-blue .nav-secondary .genesis-nav-menu li:hover > a,
-.outreach-pro-blue .widget-title,
-.outreach-pro-blue a {
+.intensivecourses-pro-blue .content .entry-title a:hover,
+.intensivecourses-pro-blue .content #genesis-responsive-slider a,
+.intensivecourses-pro-blue .content #genesis-responsive-slider h2 a:hover,
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu .sub-menu a:hover,
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu a:hover,
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu li:hover > a,
+.intensivecourses-pro-blue .widget-title,
+.intensivecourses-pro-blue a {
 	color: #2483d0;
 }
 
-.outreach-pro-blue a:hover {
+.intensivecourses-pro-blue a:hover {
 	color: #1e6dad;
 }
 
-.outreach-pro-blue .content #genesis-responsive-slider a:hover,
-.outreach-pro-blue .content #genesis-responsive-slider h2 a,
-.outreach-pro-blue .footer-widgets .widget-title,
-.outreach-pro-blue .genesis-nav-menu a,
-.outreach-pro-blue .site-footer a:hover,
-.outreach-pro-blue .site-header .widget-title,
-.outreach-pro-blue .site-title a,
-.outreach-pro-blue .site-title a:hover {
+.intensivecourses-pro-blue .content #genesis-responsive-slider a:hover,
+.intensivecourses-pro-blue .content #genesis-responsive-slider h2 a,
+.intensivecourses-pro-blue .footer-widgets .widget-title,
+.intensivecourses-pro-blue .genesis-nav-menu a,
+.intensivecourses-pro-blue .site-footer a:hover,
+.intensivecourses-pro-blue .site-header .widget-title,
+.intensivecourses-pro-blue .site-title a,
+.intensivecourses-pro-blue .site-title a:hover {
 	color: #fff;
 }
 
-.outreach-pro-blue .site-footer a {
+.intensivecourses-pro-blue .site-footer a {
 	color: #666;
 }
 
-.outreach-pro-blue .genesis-nav-menu .sub-menu a,
-.outreach-pro-blue .home-bottom .widget-title {
+.intensivecourses-pro-blue .genesis-nav-menu .sub-menu a,
+.intensivecourses-pro-blue .home-bottom .widget-title {
 	color: #333;
 }
 
-.outreach-pro-blue .genesis-nav-menu a:hover,
-.outreach-pro-blue .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-blue .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+.intensivecourses-pro-blue .genesis-nav-menu a:hover,
+.intensivecourses-pro-blue .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-blue .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #000;
 }
 
-.outreach-pro-blue .archive-pagination .active a,
-.outreach-pro-blue .archive-pagination li a:hover,
-.outreach-pro-blue .button,
-.outreach-pro-blue .nav-primary,
-.outreach-pro-blue button,
-.outreach-pro-blue input[type="button"],
-.outreach-pro-blue input[type="reset"],
-.outreach-pro-blue input[type="submit"] {
+.intensivecourses-pro-blue .archive-pagination .active a,
+.intensivecourses-pro-blue .archive-pagination li a:hover,
+.intensivecourses-pro-blue .button,
+.intensivecourses-pro-blue .nav-primary,
+.intensivecourses-pro-blue button,
+.intensivecourses-pro-blue input[type="button"],
+.intensivecourses-pro-blue input[type="reset"],
+.intensivecourses-pro-blue input[type="submit"] {
 	background-color: #2483d0;
 	color: #fff;
 }
 
-.outreach-pro-blue .button:hover,
-.outreach-pro-blue .site-header,
-.outreach-pro-blue button:hover,
-.outreach-pro-blue input:hover[type="button"],
-.outreach-pro-blue input:hover[type="reset"],
-.outreach-pro-blue input:hover[type="submit"] {
+.intensivecourses-pro-blue .button:hover,
+.intensivecourses-pro-blue .site-header,
+.intensivecourses-pro-blue button:hover,
+.intensivecourses-pro-blue input:hover[type="button"],
+.intensivecourses-pro-blue input:hover[type="reset"],
+.intensivecourses-pro-blue input:hover[type="submit"] {
 	background-color: #1e6dad;
 	color: #fff;
 }
 
-.outreach-pro-blue .sub-footer {
+.intensivecourses-pro-blue .sub-footer {
 	background-color: #edf3f4;
 }
 
-.outreach-pro-blue,
-.outreach-pro-blue .footer-widgets,
-.outreach-pro-blue .site-footer {
+.intensivecourses-pro-blue,
+.intensivecourses-pro-blue .footer-widgets,
+.intensivecourses-pro-blue .site-footer {
 	background-color: #222e37;
 }
 
-.outreach-pro-blue .author-box,
-.outreach-pro-blue .content .slide-excerpt,
-.outreach-pro-blue .nav-secondary .wrap,
-.outreach-pro-blue .sidebar .widget  {
+.intensivecourses-pro-blue .author-box,
+.intensivecourses-pro-blue .content .slide-excerpt,
+.intensivecourses-pro-blue .nav-secondary .wrap,
+.intensivecourses-pro-blue .sidebar .widget  {
 	background-color: #17222b;
 }
 
-.outreach-pro-blue .nav-secondary .genesis-nav-menu .sub-menu,
-.outreach-pro-blue .nav-secondary .genesis-nav-menu .sub-menu a {
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu .sub-menu,
+.intensivecourses-pro-blue .nav-secondary .genesis-nav-menu .sub-menu a {
 	background-color: #17222b;
 	border-color: #2d3b45;
 	color: #fff;
 }
 
-.outreach-pro-blue .enews-widget input:hover[type="submit"] {
+.intensivecourses-pro-blue .enews-widget input:hover[type="submit"] {
 	background-color: #eee;
 	color: #333;
 }
 
-/* Outreach Pro Orange
+/* intensivecourses Pro Orange
 --------------------------------------------- */
 
-.outreach-pro-orange .content .entry-title a:hover,
-.outreach-pro-orange .content #genesis-responsive-slider a,
-.outreach-pro-orange .content #genesis-responsive-slider h2 a:hover,
-.outreach-pro-orange .nav-secondary .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-orange .nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.outreach-pro-orange .nav-secondary .genesis-nav-menu a:hover,
-.outreach-pro-orange .nav-secondary .genesis-nav-menu li:hover > a,
-.outreach-pro-orange .widget-title,
-.outreach-pro-orange a {
+.intensivecourses-pro-orange .content .entry-title a:hover,
+.intensivecourses-pro-orange .content #genesis-responsive-slider a,
+.intensivecourses-pro-orange .content #genesis-responsive-slider h2 a:hover,
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu .sub-menu a:hover,
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu a:hover,
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu li:hover > a,
+.intensivecourses-pro-orange .widget-title,
+.intensivecourses-pro-orange a {
 	color: #ff7b00;
 }
 
-.outreach-pro-orange a:hover {
+.intensivecourses-pro-orange a:hover {
 	color: #cb6e23;
 }
 
-.outreach-pro-orange .content #genesis-responsive-slider a:hover,
-.outreach-pro-orange .content #genesis-responsive-slider h2 a,
-.outreach-pro-orange .footer-widgets .widget-title,
-.outreach-pro-orange .genesis-nav-menu a,
-.outreach-pro-orange .site-footer a:hover,
-.outreach-pro-orange .site-header .widget-title,
-.outreach-pro-orange .site-title a,
-.outreach-pro-orange .site-title a:hover {
+.intensivecourses-pro-orange .content #genesis-responsive-slider a:hover,
+.intensivecourses-pro-orange .content #genesis-responsive-slider h2 a,
+.intensivecourses-pro-orange .footer-widgets .widget-title,
+.intensivecourses-pro-orange .genesis-nav-menu a,
+.intensivecourses-pro-orange .site-footer a:hover,
+.intensivecourses-pro-orange .site-header .widget-title,
+.intensivecourses-pro-orange .site-title a,
+.intensivecourses-pro-orange .site-title a:hover {
 	color: #fff;
 }
 
-.outreach-pro-orange .site-footer a {
+.intensivecourses-pro-orange .site-footer a {
 	color: #666;
 }
 
-.outreach-pro-orange .genesis-nav-menu .sub-menu a,
-.outreach-pro-orange .home-bottom .widget-title {
+.intensivecourses-pro-orange .genesis-nav-menu .sub-menu a,
+.intensivecourses-pro-orange .home-bottom .widget-title {
 	color: #333;
 }
 
-.outreach-pro-orange .genesis-nav-menu a:hover,
-.outreach-pro-orange .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-orange .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+.intensivecourses-pro-orange .genesis-nav-menu a:hover,
+.intensivecourses-pro-orange .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-orange .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #000;
 }
 
-.outreach-pro-orange .archive-pagination .active a,
-.outreach-pro-orange .archive-pagination li a:hover,
-.outreach-pro-orange .button,
-.outreach-pro-orange .nav-primary,
-.outreach-pro-orange button,
-.outreach-pro-orange input[type="button"],
-.outreach-pro-orange input[type="reset"],
-.outreach-pro-orange input[type="submit"] {
+.intensivecourses-pro-orange .archive-pagination .active a,
+.intensivecourses-pro-orange .archive-pagination li a:hover,
+.intensivecourses-pro-orange .button,
+.intensivecourses-pro-orange .nav-primary,
+.intensivecourses-pro-orange button,
+.intensivecourses-pro-orange input[type="button"],
+.intensivecourses-pro-orange input[type="reset"],
+.intensivecourses-pro-orange input[type="submit"] {
 	background-color: #ff7b00;
 	color: #fff;
 }
 
-.outreach-pro-orange .button:hover,
-.outreach-pro-orange .site-header,
-.outreach-pro-orange button:hover,
-.outreach-pro-orange input:hover[type="button"],
-.outreach-pro-orange input:hover[type="reset"],
-.outreach-pro-orange input:hover[type="submit"] {
+.intensivecourses-pro-orange .button:hover,
+.intensivecourses-pro-orange .site-header,
+.intensivecourses-pro-orange button:hover,
+.intensivecourses-pro-orange input:hover[type="button"],
+.intensivecourses-pro-orange input:hover[type="reset"],
+.intensivecourses-pro-orange input:hover[type="submit"] {
 	background-color: #ef6c00;
 	color: #fff;
 }
 
-.outreach-pro-orange .sub-footer {
+.intensivecourses-pro-orange .sub-footer {
 	background-color: #f6f1e9;
 }
 
-.outreach-pro-orange,
-.outreach-pro-orange .footer-widgets,
-.outreach-pro-orange .site-footer {
+.intensivecourses-pro-orange,
+.intensivecourses-pro-orange .footer-widgets,
+.intensivecourses-pro-orange .site-footer {
 	background-color: #3c3a36;
 }
 
-.outreach-pro-orange .author-box,
-.outreach-pro-orange .content .slide-excerpt,
-.outreach-pro-orange .nav-secondary .wrap,
-.outreach-pro-orange .sidebar .widget  {
+.intensivecourses-pro-orange .author-box,
+.intensivecourses-pro-orange .content .slide-excerpt,
+.intensivecourses-pro-orange .nav-secondary .wrap,
+.intensivecourses-pro-orange .sidebar .widget  {
 	background-color: #302e29;
 }
 
-.outreach-pro-orange .nav-secondary .genesis-nav-menu .sub-menu,
-.outreach-pro-orange .nav-secondary .genesis-nav-menu .sub-menu a {
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu .sub-menu,
+.intensivecourses-pro-orange .nav-secondary .genesis-nav-menu .sub-menu a {
 	background-color: #302e29;
 	border-color: #45433f;
 	color: #fff;
 }
 
-.outreach-pro-orange .enews-widget input:hover[type="submit"] {
+.intensivecourses-pro-orange .enews-widget input:hover[type="submit"] {
 	background-color: #eee;
 	color: #333;
 }
 
 
-/* Outreach Pro Purple
+/* intensivecourses Pro Purple
 --------------------------------------------- */
 
-.outreach-pro-purple .content .entry-title a:hover,
-.outreach-pro-purple .content #genesis-responsive-slider a,
-.outreach-pro-purple .content #genesis-responsive-slider h2 a:hover,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu a:hover,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu li:hover > a,
-.outreach-pro-purple .widget-title,
-.outreach-pro-purple a {
+.intensivecourses-pro-purple .content .entry-title a:hover,
+.intensivecourses-pro-purple .content #genesis-responsive-slider a,
+.intensivecourses-pro-purple .content #genesis-responsive-slider h2 a:hover,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu .sub-menu a:hover,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu a:hover,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu li:hover > a,
+.intensivecourses-pro-purple .widget-title,
+.intensivecourses-pro-purple a {
 	color: #7b53a1;
 }
 
-.outreach-pro-purple a:hover {
+.intensivecourses-pro-purple a:hover {
 	color: #684687;
 }
 
-.outreach-pro-purple .content #genesis-responsive-slider a:hover,
-.outreach-pro-purple .content #genesis-responsive-slider h2 a,
-.outreach-pro-purple .footer-widgets .widget-title,
-.outreach-pro-purple .genesis-nav-menu a,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu .sub-menu a,
-.outreach-pro-purple .nav-secondary .genesis-nav-menu .sub-menu,
-.outreach-pro-purple .site-footer a:hover,
-.outreach-pro-purple .site-header .widget-title,
-.outreach-pro-purple .site-title a,
-.outreach-pro-purple .site-title a:hover {
+.intensivecourses-pro-purple .content #genesis-responsive-slider a:hover,
+.intensivecourses-pro-purple .content #genesis-responsive-slider h2 a,
+.intensivecourses-pro-purple .footer-widgets .widget-title,
+.intensivecourses-pro-purple .genesis-nav-menu a,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu .sub-menu a,
+.intensivecourses-pro-purple .nav-secondary .genesis-nav-menu .sub-menu,
+.intensivecourses-pro-purple .site-footer a:hover,
+.intensivecourses-pro-purple .site-header .widget-title,
+.intensivecourses-pro-purple .site-title a,
+.intensivecourses-pro-purple .site-title a:hover {
 	color: #fff;
 }
 
-.outreach-pro-purple .site-footer a {
+.intensivecourses-pro-purple .site-footer a {
 	color: #666;
 }
 
-.outreach-pro-purple .genesis-nav-menu .sub-menu a,
-.outreach-pro-purple .home-bottom .widget-title {
+.intensivecourses-pro-purple .genesis-nav-menu .sub-menu a,
+.intensivecourses-pro-purple .home-bottom .widget-title {
 	color: #333;
 }
 
-.outreach-pro-purple .genesis-nav-menu a:hover,
-.outreach-pro-purple .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-purple .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+.intensivecourses-pro-purple .genesis-nav-menu a:hover,
+.intensivecourses-pro-purple .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-purple .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #000;
 }
 
-.outreach-pro-purple .archive-pagination .active a,
-.outreach-pro-purple .archive-pagination li a:hover,
-.outreach-pro-purple .button,
-.outreach-pro-purple .nav-primary,
-.outreach-pro-purple button,
-.outreach-pro-purple input[type="button"],
-.outreach-pro-purple input[type="reset"],
-.outreach-pro-purple input[type="submit"] {
+.intensivecourses-pro-purple .archive-pagination .active a,
+.intensivecourses-pro-purple .archive-pagination li a:hover,
+.intensivecourses-pro-purple .button,
+.intensivecourses-pro-purple .nav-primary,
+.intensivecourses-pro-purple button,
+.intensivecourses-pro-purple input[type="button"],
+.intensivecourses-pro-purple input[type="reset"],
+.intensivecourses-pro-purple input[type="submit"] {
 	background-color: #7b53a1;
 	color: #fff;
 }
 
-.outreach-pro-purple .button:hover,
-.outreach-pro-purple .site-header,
-.outreach-pro-purple button:hover,
-.outreach-pro-purple input:hover[type="button"],
-.outreach-pro-purple input:hover[type="reset"],
-.outreach-pro-purple input:hover[type="submit"] {
+.intensivecourses-pro-purple .button:hover,
+.intensivecourses-pro-purple .site-header,
+.intensivecourses-pro-purple button:hover,
+.intensivecourses-pro-purple input:hover[type="button"],
+.intensivecourses-pro-purple input:hover[type="reset"],
+.intensivecourses-pro-purple input:hover[type="submit"] {
 	background-color: #684687;
 	color: #fff;
 }
 
-.outreach-pro-purple .sub-footer {
+.intensivecourses-pro-purple .sub-footer {
 	background-color: #ececec;
 }
 
-.outreach-pro-purple .enews-widget input:hover[type="submit"] {
+.intensivecourses-pro-purple .enews-widget input:hover[type="submit"] {
 	background-color: #eee;
 	color: #333;
 }
 
-/* Outreach Pro Red
+/* intensivecourses Pro Red
 --------------------------------------------- */
 
-.outreach-pro-red .content .entry-title a:hover,
-.outreach-pro-red .content #genesis-responsive-slider a,
-.outreach-pro-red .content #genesis-responsive-slider h2 a:hover,
-.outreach-pro-red .nav-secondary .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-red .nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.outreach-pro-red .nav-secondary .genesis-nav-menu a:hover,
-.outreach-pro-red .nav-secondary .genesis-nav-menu li:hover > a,
-.outreach-pro-red .widget-title,
-.outreach-pro-red a {
+.intensivecourses-pro-red .content .entry-title a:hover,
+.intensivecourses-pro-red .content #genesis-responsive-slider a,
+.intensivecourses-pro-red .content #genesis-responsive-slider h2 a:hover,
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu .sub-menu a:hover,
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu a:hover,
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu li:hover > a,
+.intensivecourses-pro-red .widget-title,
+.intensivecourses-pro-red a {
 	color: #df1431;
 }
 
-.outreach-pro-red a:hover {
+.intensivecourses-pro-red a:hover {
 	color: #bc112c;
 }
 
-.outreach-pro-red .content #genesis-responsive-slider a:hover,
-.outreach-pro-red .content #genesis-responsive-slider h2 a,
-.outreach-pro-red .footer-widgets .widget-title,
-.outreach-pro-red .genesis-nav-menu a,
-.outreach-pro-red .site-footer a:hover,
-.outreach-pro-red .site-header .widget-title,
-.outreach-pro-red .site-title a,
-.outreach-pro-red .site-title a:hover {
+.intensivecourses-pro-red .content #genesis-responsive-slider a:hover,
+.intensivecourses-pro-red .content #genesis-responsive-slider h2 a,
+.intensivecourses-pro-red .footer-widgets .widget-title,
+.intensivecourses-pro-red .genesis-nav-menu a,
+.intensivecourses-pro-red .site-footer a:hover,
+.intensivecourses-pro-red .site-header .widget-title,
+.intensivecourses-pro-red .site-title a,
+.intensivecourses-pro-red .site-title a:hover {
 	color: #fff;
 }
 
-.outreach-pro-red .site-footer a {
+.intensivecourses-pro-red .site-footer a {
 	color: #666;
 }
 
-.outreach-pro-red .genesis-nav-menu .sub-menu a,
-.outreach-pro-red .home-bottom .widget-title {
+.intensivecourses-pro-red .genesis-nav-menu .sub-menu a,
+.intensivecourses-pro-red .home-bottom .widget-title {
 	color: #333;
 }
 
-.outreach-pro-red .genesis-nav-menu a:hover,
-.outreach-pro-red .genesis-nav-menu .current-menu-item > a,
-.outreach-pro-red .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+.intensivecourses-pro-red .genesis-nav-menu a:hover,
+.intensivecourses-pro-red .genesis-nav-menu .current-menu-item > a,
+.intensivecourses-pro-red .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
 	color: #000;
 }
 
-.outreach-pro-red .archive-pagination .active a,
-.outreach-pro-red .archive-pagination li a:hover,
-.outreach-pro-red .button,
-.outreach-pro-red .nav-primary,
-.outreach-pro-red button,
-.outreach-pro-red input[type="button"],
-.outreach-pro-red input[type="reset"],
-.outreach-pro-red input[type="submit"] {
+.intensivecourses-pro-red .archive-pagination .active a,
+.intensivecourses-pro-red .archive-pagination li a:hover,
+.intensivecourses-pro-red .button,
+.intensivecourses-pro-red .nav-primary,
+.intensivecourses-pro-red button,
+.intensivecourses-pro-red input[type="button"],
+.intensivecourses-pro-red input[type="reset"],
+.intensivecourses-pro-red input[type="submit"] {
 	background-color: #df1431;
 	color: #fff;
 }
 
-.outreach-pro-red .button:hover,
-.outreach-pro-red .site-header,
-.outreach-pro-red button:hover,
-.outreach-pro-red input:hover[type="button"],
-.outreach-pro-red input:hover[type="reset"],
-.outreach-pro-red input:hover[type="submit"] {
+.intensivecourses-pro-red .button:hover,
+.intensivecourses-pro-red .site-header,
+.intensivecourses-pro-red button:hover,
+.intensivecourses-pro-red input:hover[type="button"],
+.intensivecourses-pro-red input:hover[type="reset"],
+.intensivecourses-pro-red input:hover[type="submit"] {
 	background-color: #bc112c;
 	color: #fff;
 }
 
-.outreach-pro-red .sub-footer {
+.intensivecourses-pro-red .sub-footer {
 	background-color: #f6f1e9;
 }
 
-.outreach-pro-red,
-.outreach-pro-red .footer-widgets,
-.outreach-pro-red .site-footer {
+.intensivecourses-pro-red,
+.intensivecourses-pro-red .footer-widgets,
+.intensivecourses-pro-red .site-footer {
 	background-color: #3c3a36;
 }
 
-.outreach-pro-red .author-box,
-.outreach-pro-red .content .slide-excerpt,
-.outreach-pro-red .nav-secondary .wrap,
-.outreach-pro-red .sidebar .widget {
+.intensivecourses-pro-red .author-box,
+.intensivecourses-pro-red .content .slide-excerpt,
+.intensivecourses-pro-red .nav-secondary .wrap,
+.intensivecourses-pro-red .sidebar .widget {
 	background-color: #302e29;
 }
 
-.outreach-pro-red .nav-secondary .genesis-nav-menu .sub-menu,
-.outreach-pro-red .nav-secondary .genesis-nav-menu .sub-menu a {
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu .sub-menu,
+.intensivecourses-pro-red .nav-secondary .genesis-nav-menu .sub-menu a {
 	background-color: #302e29;
 	border-color: #45433f;
 	color: #fff;
 }
 
-.outreach-pro-red .enews-widget input:hover[type="submit"] {
+.intensivecourses-pro-red .enews-widget input:hover[type="submit"] {
 	background-color: #eee;
 	color: #333;
 }
 
+.social_icon_wrapper a {
+	position: relative;
+	float: left;
+	margin: 2px;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+}
+
+.social_icon_wrapper a:after, .social_icon_wrapper a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 24px;
+	height: 24px;
+	content: "";
+	border-radius: 100%;
+	-webkit-transition: -webkit-transform .15s;
+	transition: transform .15s;
+}
+
+.social_icon_wrapper a:after, .social_icon_wrapper a:after {
+	background: #4d71da;
+	background: -moz-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#4d71da),color-stop(100%,#35c4f4));
+	background: -webkit-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -o-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -ms-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+}
+
+.social_icon_wrapper a:before, .social_icon_wrapper a:hover:after {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+.social_icon_wrapper a:after, .social_icon_wrapper a:hover:before {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+
+.social_icon_wrapper a:before {
+	background-color: rgba(119,119,119,0.04);
+	-webkit-box-shadow: inset 0px 0px 0px 1px rgba(119,119,119,0.15);
+	-moz-box-shadow: inset 0px 0px 0px 1px rgba(119,119,119,0.15);
+	box-shadow: inset 0px 0px 0px 1px rgba(119,119,119,0.15);
+}
+
+.social_icon_wrapper a i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	z-index: 10;
+	color: #777;	
+	transition: all 200ms;
+}
+
+.social_icon_wrapper a:hover i {
+	color: #fff;	
+}
+
+a.button-link.button-medium {
+	display: inline-block;
+	color: #fff;
+	transition: all 200ms;
+	padding-left: 13.333333333333px;
+	padding-right: 13.333333333333px;
+	font: normal normal normal 16px / 40px "Roboto", Helvetica, Arial, Verdana, sans-serif;
+	border-radius: 4px;
+	line-height: 40px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #4d71da;
+	background: #4d71da;
+	background: -moz-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#4d71da),color-stop(100%,#35c4f4));
+	background: -webkit-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -o-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: -ms-linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	background: linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);	
+}
+
+a.button-link.button-medium:hover {
+	text-decoration: none;
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);	
+}
+
+#benefits-grid-1 .wf-cell {
+	float: left;
+	margin-bottom: 40px;
+	padding: 0 22px;
+	color: #777;
+}
+
+#benefits-grid-1 .wf-cell h4 a {
+	color: #333;
+	font-size: 20px;	
+	text-decoration: none;
+}
+
+#benefits-grid-1 .wf-cell h4 a:hover {
+	color: #4d71da;	
+}
+
+#benefits-grid-1 .wf-cell  .wf-table {
+	display: flex;
+}
+
+#benefits-grid-1 .wf-cell .wf-td > a:first-child {
+	background: linear-gradient(30deg,#4d71da 0%,#35c4f4 100%);
+	width: 50px;
+	height: 50px;
+	margin: 5px 22px 0 0;
+	line-height: 50px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 4px;
+}
 
 /*
 Media Queries
@@ -2148,7 +2678,7 @@ Media Queries
 		width: 210px;
 	}
 	
-	.outreach-pro-home .site-inner .wrap {
+	.intensivecourses-pro-home .site-inner .wrap {
 		max-width: none;
 	}
 
@@ -2245,7 +2775,7 @@ Media Queries
 		padding-right: 5%;
 	}
 	
-	.outreach-pro-home .site-inner .wrap {
+	.intensivecourses-pro-home .site-inner .wrap {
 		padding: 0;
 	}
 	

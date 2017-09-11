@@ -1,26 +1,26 @@
 <?php
 /**
- * This file adds the Home Page to the Outreach Pro Theme.
+ * This file adds the Home Page to the Intensive Courses Theme.
  *
- * @author StudioPress
- * @package Outreach Pro
+ * @author StudioPress / CojCruz
+ * @package Intensive Courses branched from intensivecourses Pro 
  * @subpackage Customizations
  */
 
-add_action( 'genesis_meta', 'outreach_home_genesis_meta' );
+add_action( 'genesis_meta', 'intensivecourses_home_genesis_meta' );
 /**
  * Add widget support for homepage. If no widgets active, display the default loop.
  *
  */
-function outreach_home_genesis_meta() {
+function intensivecourses_home_genesis_meta() {
 
 	if ( is_active_sidebar( 'home-top' ) || is_active_sidebar( 'home-bottom' ) ) {
 
 		//* Force full-width-content layout setting
 		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 		
-		//* Add outreach-pro-home body class
-		add_filter( 'body_class', 'outreach_body_class' );
+		//* Add intensivecourses-pro-home body class
+		add_filter( 'body_class', 'intensivecourses_body_class' );
 		
 		//* Remove breadcrumbs
 		remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
@@ -29,23 +29,23 @@ function outreach_home_genesis_meta() {
 		remove_action( 'genesis_loop', 'genesis_do_loop' );
 		
 		//* Add home top widgets
-		add_action( 'genesis_loop', 'outreach_home_top_widgets' );
+		add_action( 'genesis_loop', 'intensivecourses_home_top_widgets' );
 
 		//* Add home bottom widgets
-		add_action( 'genesis_before_footer', 'outreach_home_bottom_widgets', 1 );
+		add_action( 'genesis_before_footer', 'intensivecourses_home_bottom_widgets', 1 );
 
 	}
 
 }
 
-function outreach_body_class( $classes ) {
+function intensivecourses_body_class( $classes ) {
 
-	$classes[] = 'outreach-pro-home';
+	$classes[] = 'intensivecourses-pro-home';
 	return $classes;
 	
 }
 
-function outreach_home_top_widgets() {
+function intensivecourses_home_top_widgets() {
 
 	genesis_widget_area( 'home-top', array(
 		'before' => '<div class="home-top widget-area">',
@@ -54,7 +54,7 @@ function outreach_home_top_widgets() {
 	
 }
 
-function outreach_home_bottom_widgets() {
+function intensivecourses_home_bottom_widgets() {
 	
 	genesis_widget_area( 'home-bottom', array(
 		'before' => '<div class="home-bottom widget-area"><div class="wrap">',

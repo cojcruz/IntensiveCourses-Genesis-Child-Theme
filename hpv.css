@@ -1,0 +1,161 @@
+#hpv_poster {
+		width: 300px;
+		height: 240px;
+		background-size: cover;
+		background-position: center center;
+		margin: 20px auto;
+		position: relative;	
+		cursor: pointer;
+	}
+	#hpv_poster .button.begin {
+		width: 100px;
+		height: 50px;
+		line-height: 50px;
+		vertical-align: middle;
+		text-align: center;
+		margin: 0 auto;
+		position: absolute;
+		top: calc(50% - 25px);
+		left: calc(50% - 50px);
+		border: 2px solid #666;
+		background: #fff;
+		box-shadow: 0 5px 5px #000;
+		border-radius: 20px;
+		transition: all 250ms ease-out;
+	}
+	#hpv_poster:hover .button.begin {
+		background: #666;
+		color: #fff;	
+	}
+	#hpv_poster .button.begin i {
+		vertical-align: middle;
+	}
+	#hpv_wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.75);	 
+		z-index: 9999;
+		display: none;
+	}
+	.hpv_wrap {
+		position: fixed;
+		width: 40%;
+		left: 30%;
+		top: calc( 50% - 250px);
+		box-shadow: 0 0 10px rgba(0,0,0,0.8);
+		border-radius: 5px;
+		overflow: hidden;
+		background: #fff;
+	}
+	#hpv_player {
+		width: 100%;
+		height: auto;
+		max-height: 50%;
+		text-align: center;
+		cursor: pointer;
+	}
+	.hpv_footer {
+		position: relative;
+		background: #fff;
+		padding: 5px;
+		min-height: 46px;
+	}
+	.hpv_ui {
+		float: right;	
+		display: flex;
+	}
+	.hpv_ui .button {
+		width: 36px;
+		height: 36px;
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 42px;
+		margin: 0 15px;
+		padding: 0;
+		background: #fff;
+		border: 2px solid;
+		border-radius: 50%;
+		box-shadow: 0 1px 3px rgba(0,0,0,.5);
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		transition: all 250ms ease-in-out;
+	}
+	.hpv_ui .button:hover {
+		background: #000;
+		color: #fff;	
+	}
+	.flag {	
+		width: 36px;
+		height: 36px;
+		color: #f00;
+		padding: 0;
+		margin: 0 2px;
+		border-radius: 50%;
+		background: #fff;
+		display: inline-block;
+		box-shadow: 0 1px 3px rgba(0,0,0,.5);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		box-sizing: border-box;
+		text-align: center;
+		line-height: 45px;
+	}
+	#results {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		line-height: 100%;
+		text-align: center;
+		background: #fff;
+		display: none;
+	}
+	#results .wrap {
+		position: absolute;
+		top: calc( 50% - 40px);
+		width: 100%;
+		font-family: Roboto;
+		font-size: 200%;
+		font-weight: 700;
+	}
+	#results h4 {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	#results .button {
+		width: 100px;
+		margin: auto;
+		border: 2px solid #aaa;
+		line-height: 190%;
+		border-radius: 10%;
+		font-size: 60%;
+		background: #ccc;
+		cursor: pointer;
+		transition: all 250ms ease-in-out;
+	}
+	#results .button:hover {
+		background: #aaa;
+		color: #fff;	
+	}
+	#hpv_wrapper .close {
+		color: #fff;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		text-shadow: 0px 3px 5px #000;
+		cursor: pointer;
+	}
+	#hpv_wrapper .close i {
+		font-size: 265%;	
+	}
